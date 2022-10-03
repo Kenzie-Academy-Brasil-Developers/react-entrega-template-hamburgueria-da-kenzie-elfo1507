@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import ProductList from "./components/Product/ProductList/ProductList";
@@ -11,6 +12,7 @@ function App() {
   const [filtro, setFiltro] = useState("");
   return (
     <div className="App">
+      <ToastContainer />
       <Global />
       <Header setFiltro={setFiltro} />
       <Main>

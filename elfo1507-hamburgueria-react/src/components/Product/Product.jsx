@@ -7,6 +7,9 @@ import {
   TituloProd,
 } from "../../styles/item";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Product({ src, nome, tipo, preco, id, setCart, cart }) {
   return (
     <Prod>
@@ -18,7 +21,7 @@ function Product({ src, nome, tipo, preco, id, setCart, cart }) {
         type="button"
         id={id}
         onClick={() => {
-          if (!cart.includes((el) => cart.find(el))) {
+          if (!cart.includes(cart.find((el) => el.id === id))) {
             console.log(id);
             setCart([
               ...cart,
@@ -31,7 +34,16 @@ function Product({ src, nome, tipo, preco, id, setCart, cart }) {
               },
             ]);
           } else {
-            console.log("ja tem");
+            toast.error("Item já existe no carrinho", {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           }
         }}
       >
