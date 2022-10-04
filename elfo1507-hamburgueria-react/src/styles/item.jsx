@@ -17,12 +17,13 @@ export const Prod = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 3px;
   background-color: var(--grey4);
   border: 1px solid var(--grey3);
   width: 200px;
   padding: 10px;
   @media (min-width: 768px) {
-    width: 20%;
+    width: 30%;
   }
 `;
 
@@ -38,11 +39,11 @@ export const TituloProd = styled.h3`
 `;
 
 export const PrecoProd = styled.span`
-  font-size: 10px;
+  font-size: 13px;
   color: var(--mainColor);
 `;
 
 export const TipoProd = styled.p`
-  font-size: 9px;
+  font-size: 11px;
   color: var(--grey2);
 `;

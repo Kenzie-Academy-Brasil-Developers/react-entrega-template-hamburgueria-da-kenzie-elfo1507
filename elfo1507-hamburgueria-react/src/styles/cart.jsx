@@ -9,42 +9,52 @@ export const CartTitle = styled.h4`
   justify-content: center;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  padding: 20px;
 `;
 
 export const CartContainer = styled.div`
   margin-top: 50px;
   width: 100%;
   @media (min-width: 768px) {
-    width: 20%;
+    width: 300px;
   }
 `;
 
 export const EmptyCart = styled.div`
-  height: 300px;
+  height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--grey3);
-  border-left: 2px var(--grey2) solid;
-  border-right: 2px var(--grey2) solid;
-  border-bottom: 2px var(--grey2) solid;
+  background-color: var(--grey4);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  p {
+    font-weight: bold;
+  }
 `;
 
 export const CartTotalValue = styled.div`
-  display: flex;
   flex-direction: column;
-  background-color: var(--mainColor);
+  background-color: var(--grey4);
   height: 50px;
-  color: white;
   display: flex;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   justify-content: center;
   align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+  }
 `;
 
 export const CartRemoveAll = styled.button`
-  margin-top: -11px;
   width: 100%;
   padding: 5px 5px;
   background-color: var(--grey3);
@@ -52,8 +62,8 @@ export const CartRemoveAll = styled.button`
 
 export const CartCard = styled.li`
   display: flex;
-  background-color: var(--grey3);
-  border: 1px var(--grey2) solid;
+  background-color: var(--grey4);
+  border: 1px var(--grey3) solid;
   width: 100%;
   height: 70px;
 `;
@@ -68,4 +78,25 @@ export const CartItems = styled.ul`
   flex-direction: column;
   gap: 5px;
   margin-bottom: 5px;
+`;
+
+export const AddItems = styled.span`
+  font-size: 9px;
+  color: var(--grey2);
+`;
+
+export const CartItemsCont = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3px;
+  button {
+    color: var(--grey2);
+  }
+
+  p {
+    font-size: 9px;
+    color: var(--grey2);
+  }
 `;

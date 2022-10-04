@@ -15,4 +15,5 @@ export const BtnMain = styled.button`
   color: white;
   border-radius: 5px;
   padding: 3px;
+  width: 80px;
 `;

@@ -1,10 +1,10 @@
-import { CardImg, CartCard } from "../../../styles/cart";
+import { CardImg, CartCard, CartItemsCont } from "../../../styles/cart";
 
 function CartItem({ nome, img, tipo, id, cart, setCart }) {
   return (
     <CartCard>
       <CardImg src={img} alt="" />
-      <div>
+      <CartItemsCont>
         <div>
           <h5>{nome}</h5>
           <p>{tipo}</p>
@@ -22,7 +22,7 @@ function CartItem({ nome, img, tipo, id, cart, setCart }) {
         >
           remover
         </button>
-      </div>
+      </CartItemsCont>
     </CartCard>
   );
 }

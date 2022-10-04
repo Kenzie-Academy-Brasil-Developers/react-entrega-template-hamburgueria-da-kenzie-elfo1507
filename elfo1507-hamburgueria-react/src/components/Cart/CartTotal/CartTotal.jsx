@@ -4,15 +4,20 @@ function CartTotal({ cart, setCart }) {
   if (cart.length !== 0) {
     return (
       <CartTotalValue>
-        <CartRemoveAll type="button" onClick={() => setCart([])}>
-          Remover Tudo
-        </CartRemoveAll>
-        <p>
-          Total: R$
-          {parseFloat(
-            cart.reduce((pv, cv) => parseFloat(pv) + parseFloat(cv.preco), 0)
-          )}
-        </p>
+        <div>
+          <p>Total:</p>
+          <p>
+            R$
+            {parseFloat(
+              cart.reduce((pv, cv) => parseFloat(pv) + parseFloat(cv.preco), 0)
+            )}
+          </p>
+        </div>
+        <div>
+          <CartRemoveAll type="button" onClick={() => setCart([])}>
+            Remover Tudo
+          </CartRemoveAll>
+        </div>
       </CartTotalValue>
     );
   } else {
