@@ -17,7 +17,7 @@ export const Prod = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3px;
+  gap: 10px;
   background-color: var(--grey4);
   border: 1px solid var(--grey3);
   width: 200px;
@@ -30,7 +30,8 @@ export const Prod = styled.li`
 export const ImgItem = styled.img`
   width: 175px;
   @media (min-width: 768px) {
-    width: 100%;
+    width: 150px;
+    align-self: center;
   }
 `;
 
